@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9ba7503fe17041499292d68d3fe99bf5" Name="Diagram1" ZoomLevel="57" SnapToGrid="true">
+        <EntityTypeShape EntityType="TFSModel.Clasificaciones" Width="1.5" PointX="5.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TFSModel.Clientes" Width="1.5" PointX="8.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TFSModel.Convenios" Width="1.5" PointX="16.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TFSModel.Financieras" Width="1.5" PointX="0.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TFSModel.Paquetes" Width="1.5" PointX="11" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TFSModel.Perfiles" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TFSModel.Usuarios" Width="1.5" PointX="2.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TFSModel.Vehiculos" Width="1.5" PointX="16.125" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TFSModel.VentaPaquetes" Width="1.5" PointX="13.75" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="TFSModel.FK_Clasificaciones_Usuarios_Crea" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Clasificaciones_Usuarios_Modifica" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Clientes_Clasificaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Clientes_Usuarios_Crea" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Clientes_Usuarios_Modifica" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_VentaPaquetes_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Vehiculos_Convenios" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Financieras_Usuarios_Crea" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Financieras_Usuarios_Modifica" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Paquetes_Financieras" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Paquetes_Usuarios_Crea" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Paquetes_Usuarios_Modifica" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Paquetes_Vehiculos" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_VentaPaquetes_Paquetes" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Perfiles_Usuarios_Crea" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Perfiles_Usuarios_Modifica" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Usuarios_Perfiles" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Usuarios_Usuarios_Crea" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Usuarios_Usuarios_Modifica" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Vehiculos_Usuarios_Crea" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_Vehiculos_Usuarios_Modifica" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_VentaPaquetes_Usuarios_Crea" ManuallyRouted="false" />
+        <AssociationConnector Association="TFSModel.FK_VentaPaquetes_Usuarios_Modifica" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

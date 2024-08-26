@@ -1,0 +1,74 @@
+﻿@model TFSi.Vehiculos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vehiculos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionVehiculo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionVehiculo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.matriculaVehiculo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matriculaVehiculo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreaVehiculo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreaVehiculo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificaVehiculo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificaVehiculo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Convenios.descripcionConvenio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Convenios.descripcionConvenio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.descripcionUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios1.descripcionUsuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idVehiculoPK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TFSModelStoreContainer" CdmEntityContainer="TFSEntities">
+    <EntitySetMapping Name="Clasificaciones">
+      <EntityTypeMapping TypeName="TFSModel.Clasificaciones">
+        <MappingFragment StoreEntitySet="Clasificaciones">
+          <ScalarProperty Name="idClasificacionPK" ColumnName="idClasificacionPK" />
+          <ScalarProperty Name="descripcionClasificacion" ColumnName="descripcionClasificacion" />
+          <ScalarProperty Name="idUsuarioCreaClasificacionFK" ColumnName="idUsuarioCreaClasificacionFK" />
+          <ScalarProperty Name="fechaCreaClasificacion" ColumnName="fechaCreaClasificacion" />
+          <ScalarProperty Name="idUsuarioModificaClasificacionFK" ColumnName="idUsuarioModificaClasificacionFK" />
+          <ScalarProperty Name="fechaModificaClasificacion" ColumnName="fechaModificaClasificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="TFSModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="idClientePK" ColumnName="idClientePK" />
+          <ScalarProperty Name="descripcionCliente" ColumnName="descripcionCliente" />
+          <ScalarProperty Name="idClasificacionClienteFK" ColumnName="idClasificacionClienteFK" />
+          <ScalarProperty Name="idUsuarioCreaClienteFK" ColumnName="idUsuarioCreaClienteFK" />
+          <ScalarProperty Name="fechaCreaCliente" ColumnName="fechaCreaCliente" />
+          <ScalarProperty Name="idUsuarioModificaClienteFK" ColumnName="idUsuarioModificaClienteFK" />
+          <ScalarProperty Name="fechaModificaCliente" ColumnName="fechaModificaCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Convenios">
+      <EntityTypeMapping TypeName="TFSModel.Convenios">
+        <MappingFragment StoreEntitySet="Convenios">
+          <ScalarProperty Name="idConvenioPK" ColumnName="idConvenioPK" />
+          <ScalarProperty Name="descripcionConvenio" ColumnName="descripcionConvenio" />
+          <ScalarProperty Name="idUsuarioCreaConvenioFK" ColumnName="idUsuarioCreaConvenioFK" />
+          <ScalarProperty Name="fechaCreaConvenio" ColumnName="fechaCreaConvenio" />
+          <ScalarProperty Name="idUsuarioModificaConvenioFK" ColumnName="idUsuarioModificaConvenioFK" />
+          <ScalarProperty Name="fechaModificaConvenio" ColumnName="fechaModificaConvenio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Financieras">
+      <EntityTypeMapping TypeName="TFSModel.Financieras">
+        <MappingFragment StoreEntitySet="Financieras">
+          <ScalarProperty Name="idFinancieraPK" ColumnName="idFinancieraPK" />
+          <ScalarProperty Name="descripcionFinananciera" ColumnName="descripcionFinananciera" />
+          <ScalarProperty Name="idUsuarioCreaFinancieraFK" ColumnName="idUsuarioCreaFinancieraFK" />
+          <ScalarProperty Name="fechaCreaFinanciera" ColumnName="fechaCreaFinanciera" />
+          <ScalarProperty Name="idUsuarioModificaFinancieraFK" ColumnName="idUsuarioModificaFinancieraFK" />
+          <ScalarProperty Name="fechaModificaFinanciera" ColumnName="fechaModificaFinanciera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paquetes">
+      <EntityTypeMapping TypeName="TFSModel.Paquetes">
+        <MappingFragment StoreEntitySet="Paquetes">
+          <ScalarProperty Name="idPaquetePK" ColumnName="idPaquetePK" />
+          <ScalarProperty Name="descripcionPaquete" ColumnName="descripcionPaquete" />
+          <ScalarProperty Name="idFinancieraFK" ColumnName="idFinancieraFK" />
+          <ScalarProperty Name="idVehiculoFK" ColumnName="idVehiculoFK" />
+          <ScalarProperty Name="montoSugeridoPaquete" ColumnName="montoSugeridoPaquete" />
+          <ScalarProperty Name="mesesSugeridoPaquete" ColumnName="mesesSugeridoPaquete" />
+          <ScalarProperty Name="interesesSugeridoPaquete" ColumnName="interesesSugeridoPaquete" />
+          <ScalarProperty Name="cuotaMensualEstimadaPaquete" ColumnName="cuotaMensualEstimadaPaquete" />
+          <ScalarProperty Name="clausulasPaquete" ColumnName="clausulasPaquete" />
+          <ScalarProperty Name="idUsuarioCreaPaqueteFK" ColumnName="idUsuarioCreaPaqueteFK" />
+          <ScalarProperty Name="fechaCreaPaquete" ColumnName="fechaCreaPaquete" />
+          <ScalarProperty Name="idUsuarioModificaPaqueteFK" ColumnName="idUsuarioModificaPaqueteFK" />
+          <ScalarProperty Name="fechaModificaPaquete" ColumnName="fechaModificaPaquete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perfiles">
+      <EntityTypeMapping TypeName="TFSModel.Perfiles">
+        <MappingFragment StoreEntitySet="Perfiles">
+          <ScalarProperty Name="idPerfilPK" ColumnName="idPerfilPK" />
+          <ScalarProperty Name="descripcionPerfil" ColumnName="descripcionPerfil" />
+          <ScalarProperty Name="idUsuarioCreaPerfilFK" ColumnName="idUsuarioCreaPerfilFK" />
+          <ScalarProperty Name="fechaCreaPerfil" ColumnName="fechaCreaPerfil" />
+          <ScalarProperty Name="idUsuarioModificaPerfilFK" ColumnName="idUsuarioModificaPerfilFK" />
+          <ScalarProperty Name="fechaModificaPerfil" ColumnName="fechaModificaPerfil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="TFSModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="idUsuarioPK" ColumnName="idUsuarioPK" />
+          <ScalarProperty Name="descripcionUsuario" ColumnName="descripcionUsuario" />
+          <ScalarProperty Name="idUsuarioCreaUsuarioFK" ColumnName="idUsuarioCreaUsuarioFK" />
+          <ScalarProperty Name="fechaCreaUsuario" ColumnName="fechaCreaUsuario" />
+          <ScalarProperty Name="idUsuarioModificaUsuarioFK" ColumnName="idUsuarioModificaUsuarioFK" />
+          <ScalarProperty Name="fechaModificaUsuario" ColumnName="fechaModificaUsuario" />
+          <ScalarProperty Name="idPerfilUsuarioFK" ColumnName="idPerfilUsuarioFK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehiculos">
+      <EntityTypeMapping TypeName="TFSModel.Vehiculos">
+        <MappingFragment StoreEntitySet="Vehiculos">
+          <ScalarProperty Name="idVehiculoPK" ColumnName="idVehiculoPK" />
+          <ScalarProperty Name="descripcionVehiculo" ColumnName="descripcionVehiculo" />
+          <ScalarProperty Name="matriculaVehiculo" ColumnName="matriculaVehiculo" />
+          <ScalarProperty Name="idConvenioFK" ColumnName="idConvenioFK" />
+          <ScalarProperty Name="idUsuarioCreaVehiculoFK" ColumnName="idUsuarioCreaVehiculoFK" />
+          <ScalarProperty Name="fechaCreaVehiculo" ColumnName="fechaCreaVehiculo" />
+          <ScalarProperty Name="idUsuarioModificaVehiculoFK" ColumnName="idUsuarioModificaVehiculoFK" />
+          <ScalarProperty Name="fechaModificaVehiculo" ColumnName="fechaModificaVehiculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentaPaquetes">
+      <EntityTypeMapping TypeName="TFSModel.VentaPaquetes">
+        <MappingFragment StoreEntitySet="VentaPaquetes">
+          <ScalarProperty Name="idVentaPaquetePK" ColumnName="idVentaPaquetePK" />
+          <ScalarProperty Name="numeroVentaPaquete" ColumnName="numeroVentaPaquete" />
+          <ScalarProperty Name="idClienteFK" ColumnName="idClienteFK" />
+          <ScalarProperty Name="idPaqueteFK" ColumnName="idPaqueteFK" />
+          <ScalarProperty Name="idUsuarioCreaVentaPaqueteFK" ColumnName="idUsuarioCreaVentaPaqueteFK" />
+          <ScalarProperty Name="fechaCreaVentaPaquete" ColumnName="fechaCreaVentaPaquete" />
+          <ScalarProperty Name="idUsuarioModificaVentaPaqueteFK" ColumnName="idUsuarioModificaVentaPaqueteFK" />
+          <ScalarProperty Name="fechaModificaVentaPaquete" ColumnName="fechaModificaVentaPaquete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="TFSModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="TFSModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="TFSModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="TFSModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TFSModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="TFSModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TFSModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="TFSModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="TFSModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

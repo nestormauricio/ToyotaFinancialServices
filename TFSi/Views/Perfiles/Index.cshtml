@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TFSi.Perfiles>
+
+@{
+    ViewBag.Title = "Perfiles";
+}
+
+<h2>Perfiles</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcionPerfil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCreaPerfil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaModificaPerfil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionPerfil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCreaPerfil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaModificaPerfil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios.descripcionUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios1.descripcionUsuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPerfilPK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPerfilPK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPerfilPK })
+        </td>
+    </tr>
+}
+
+</table>

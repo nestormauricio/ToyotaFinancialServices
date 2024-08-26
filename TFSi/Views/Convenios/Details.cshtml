@@ -1,0 +1,58 @@
+﻿@model TFSi.Convenios
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Convenios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionConvenio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionConvenio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idUsuarioCreaConvenioFK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUsuarioCreaConvenioFK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreaConvenio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreaConvenio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idUsuarioModificaConvenioFK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUsuarioModificaConvenioFK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificaConvenio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificaConvenio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idConvenioPK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TFSi.Convenios>
+
+@{
+    ViewBag.Title = "Convenios";
+}
+
+<h2>Convenios</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcionConvenio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idUsuarioCreaConvenioFK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCreaConvenio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idUsuarioModificaConvenioFK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaModificaConvenio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionConvenio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idUsuarioCreaConvenioFK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCreaConvenio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idUsuarioModificaConvenioFK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaModificaConvenio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idConvenioPK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idConvenioPK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idConvenioPK })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TFSi.Clientes>
+
+@{
+    ViewBag.Title = "Clientes";
+}
+
+<h2>Clientes</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcionCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCreaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaModificaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clasificaciones.descripcionClasificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCreaCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaModificaCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clasificaciones.descripcionClasificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios.descripcionUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios1.descripcionUsuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idClientePK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idClientePK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idClientePK })
+        </td>
+    </tr>
+}
+
+</table>

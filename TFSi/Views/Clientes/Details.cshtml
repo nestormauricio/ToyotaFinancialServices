@@ -1,0 +1,66 @@
+﻿@model TFSi.Clientes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Clientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreaCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreaCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificaCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificaCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clasificaciones.descripcionClasificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clasificaciones.descripcionClasificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.descripcionUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios1.descripcionUsuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idClientePK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,74 @@
+﻿@model TFSi.VentaPaquetes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VentaPaquetes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroVentaPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroVentaPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreaVentaPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreaVentaPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificaVentaPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificaVentaPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clientes.descripcionCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clientes.descripcionCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paquetes.descripcionPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paquetes.descripcionPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.descripcionUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios1.descripcionUsuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idVentaPaquetePK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

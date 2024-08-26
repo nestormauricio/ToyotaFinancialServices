@@ -1,0 +1,58 @@
+﻿@model TFSi.Financieras
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Financieras</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionFinananciera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionFinananciera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreaFinanciera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreaFinanciera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificaFinanciera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificaFinanciera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.descripcionUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios1.descripcionUsuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idFinancieraPK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

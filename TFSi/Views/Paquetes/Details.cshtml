@@ -1,0 +1,114 @@
+﻿@model TFSi.Paquetes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Paquetes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.montoSugeridoPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.montoSugeridoPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mesesSugeridoPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mesesSugeridoPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.interesesSugeridoPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.interesesSugeridoPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuotaMensualEstimadaPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuotaMensualEstimadaPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clausulasPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clausulasPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreaPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreaPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificaPaquete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificaPaquete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Financieras.descripcionFinananciera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Financieras.descripcionFinananciera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.descripcionUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios1.descripcionUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehiculos.descripcionVehiculo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehiculos.descripcionVehiculo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPaquetePK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

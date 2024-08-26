@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TFSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clasificaciones">
+    <Key>
+      <PropertyRef Name="idClasificacionPK" />
+    </Key>
+    <Property Name="idClasificacionPK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionClasificacion" Type="nvarchar(max)" />
+    <Property Name="idUsuarioCreaClasificacionFK" Type="int" />
+    <Property Name="fechaCreaClasificacion" Type="datetime" />
+    <Property Name="idUsuarioModificaClasificacionFK" Type="int" />
+    <Property Name="fechaModificaClasificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="idClientePK" />
+    </Key>
+    <Property Name="idClientePK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionCliente" Type="nvarchar(max)" />
+    <Property Name="idClasificacionClienteFK" Type="int" />
+    <Property Name="idUsuarioCreaClienteFK" Type="int" />
+    <Property Name="fechaCreaCliente" Type="datetime" />
+    <Property Name="idUsuarioModificaClienteFK" Type="int" />
+    <Property Name="fechaModificaCliente" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Convenios">
+    <Key>
+      <PropertyRef Name="idConvenioPK" />
+    </Key>
+    <Property Name="idConvenioPK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionConvenio" Type="nvarchar(max)" />
+    <Property Name="idUsuarioCreaConvenioFK" Type="int" />
+    <Property Name="fechaCreaConvenio" Type="datetime" />
+    <Property Name="idUsuarioModificaConvenioFK" Type="int" />
+    <Property Name="fechaModificaConvenio" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Financieras">
+    <Key>
+      <PropertyRef Name="idFinancieraPK" />
+    </Key>
+    <Property Name="idFinancieraPK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionFinananciera" Type="nvarchar(max)" />
+    <Property Name="idUsuarioCreaFinancieraFK" Type="int" />
+    <Property Name="fechaCreaFinanciera" Type="datetime" />
+    <Property Name="idUsuarioModificaFinancieraFK" Type="int" />
+    <Property Name="fechaModificaFinanciera" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Paquetes">
+    <Key>
+      <PropertyRef Name="idPaquetePK" />
+    </Key>
+    <Property Name="idPaquetePK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionPaquete" Type="nvarchar(max)" />
+    <Property Name="idFinancieraFK" Type="int" />
+    <Property Name="idVehiculoFK" Type="int" />
+    <Property Name="montoSugeridoPaquete" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="mesesSugeridoPaquete" Type="float" />
+    <Property Name="interesesSugeridoPaquete" Type="float" />
+    <Property Name="cuotaMensualEstimadaPaquete" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="clausulasPaquete" Type="nvarchar(max)" />
+    <Property Name="idUsuarioCreaPaqueteFK" Type="int" />
+    <Property Name="fechaCreaPaquete" Type="datetime" />
+    <Property Name="idUsuarioModificaPaqueteFK" Type="int" />
+    <Property Name="fechaModificaPaquete" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Perfiles">
+    <Key>
+      <PropertyRef Name="idPerfilPK" />
+    </Key>
+    <Property Name="idPerfilPK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionPerfil" Type="nvarchar(max)" />
+    <Property Name="idUsuarioCreaPerfilFK" Type="int" />
+    <Property Name="fechaCreaPerfil" Type="datetime" />
+    <Property Name="idUsuarioModificaPerfilFK" Type="int" />
+    <Property Name="fechaModificaPerfil" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="idUsuarioPK" />
+    </Key>
+    <Property Name="idUsuarioPK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionUsuario" Type="nvarchar(max)" />
+    <Property Name="idUsuarioCreaUsuarioFK" Type="int" />
+    <Property Name="fechaCreaUsuario" Type="datetime" />
+    <Property Name="idUsuarioModificaUsuarioFK" Type="int" />
+    <Property Name="fechaModificaUsuario" Type="datetime" />
+    <Property Name="idPerfilUsuarioFK" Type="int" />
+  </EntityType>
+  <EntityType Name="Vehiculos">
+    <Key>
+      <PropertyRef Name="idVehiculoPK" />
+    </Key>
+    <Property Name="idVehiculoPK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionVehiculo" Type="nvarchar(max)" />
+    <Property Name="matriculaVehiculo" Type="nvarchar" MaxLength="10" />
+    <Property Name="idConvenioFK" Type="int" />
+    <Property Name="idUsuarioCreaVehiculoFK" Type="int" />
+    <Property Name="fechaCreaVehiculo" Type="datetime" />
+    <Property Name="idUsuarioModificaVehiculoFK" Type="int" />
+    <Property Name="fechaModificaVehiculo" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VentaPaquetes">
+    <Key>
+      <PropertyRef Name="idVentaPaquetePK" />
+    </Key>
+    <Property Name="idVentaPaquetePK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numeroVentaPaquete" Type="int" />
+    <Property Name="idClienteFK" Type="int" />
+    <Property Name="idPaqueteFK" Type="int" />
+    <Property Name="idUsuarioCreaVentaPaqueteFK" Type="int" />
+    <Property Name="fechaCreaVentaPaquete" Type="datetime" />
+    <Property Name="idUsuarioModificaVentaPaqueteFK" Type="int" />
+    <Property Name="fechaModificaVentaPaquete" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Clasificaciones_Usuarios_Crea">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Clasificaciones" Type="Self.Clasificaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Clasificaciones">
+        <PropertyRef Name="idUsuarioCreaClasificacionFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clasificaciones_Usuarios_Modifica">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Clasificaciones" Type="Self.Clasificaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Clasificaciones">
+        <PropertyRef Name="idUsuarioModificaClasificacionFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_Clasificaciones">
+    <End Role="Clasificaciones" Type="Self.Clasificaciones" Multiplicity="0..1" />
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clasificaciones">
+        <PropertyRef Name="idClasificacionPK" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="idClasificacionClienteFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_Usuarios_Crea">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="idUsuarioCreaClienteFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_Usuarios_Modifica">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="idUsuarioModificaClienteFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financieras_Usuarios_Crea">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Financieras" Type="Self.Financieras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Financieras">
+        <PropertyRef Name="idUsuarioCreaFinancieraFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financieras_Usuarios_Modifica">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Financieras" Type="Self.Financieras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Financieras">
+        <PropertyRef Name="idUsuarioModificaFinancieraFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Paquetes_Financieras">
+    <End Role="Financieras" Type="Self.Financieras" Multiplicity="0..1" />
+    <End Role="Paquetes" Type="Self.Paquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Financieras">
+        <PropertyRef Name="idFinancieraPK" />
+      </Principal>
+      <Dependent Role="Paquetes">
+        <PropertyRef Name="idFinancieraFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Paquetes_Usuarios_Crea">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Paquetes" Type="Self.Paquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Paquetes">
+        <PropertyRef Name="idUsuarioCreaPaqueteFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Paquetes_Usuarios_Modifica">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Paquetes" Type="Self.Paquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Paquetes">
+        <PropertyRef Name="idUsuarioModificaPaqueteFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Paquetes_Vehiculos">
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+    <End Role="Paquetes" Type="Self.Paquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculos">
+        <PropertyRef Name="idVehiculoPK" />
+      </Principal>
+      <Dependent Role="Paquetes">
+        <PropertyRef Name="idVehiculoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Perfiles_Usuarios_Crea">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Perfiles" Type="Self.Perfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Perfiles">
+        <PropertyRef Name="idUsuarioCreaPerfilFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Perfiles_Usuarios_Modifica">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Perfiles" Type="Self.Perfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Perfiles">
+        <PropertyRef Name="idUsuarioModificaPerfilFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Perfiles">
+    <End Role="Perfiles" Type="Self.Perfiles" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfiles">
+        <PropertyRef Name="idPerfilPK" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="idPerfilUsuarioFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Usuarios_Crea">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Usuarios1" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Usuarios1">
+        <PropertyRef Name="idUsuarioCreaUsuarioFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Usuarios_Modifica">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Usuarios1" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Usuarios1">
+        <PropertyRef Name="idUsuarioModificaUsuarioFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehiculos_Convenios">
+    <End Role="Convenios" Type="Self.Convenios" Multiplicity="0..1" />
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Convenios">
+        <PropertyRef Name="idConvenioPK" />
+      </Principal>
+      <Dependent Role="Vehiculos">
+        <PropertyRef Name="idConvenioFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehiculos_Usuarios_Crea">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Vehiculos">
+        <PropertyRef Name="idUsuarioCreaVehiculoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehiculos_Usuarios_Modifica">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="Vehiculos">
+        <PropertyRef Name="idUsuarioModificaVehiculoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentaPaquetes_Clientes">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+    <End Role="VentaPaquetes" Type="Self.VentaPaquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="idClientePK" />
+      </Principal>
+      <Dependent Role="VentaPaquetes">
+        <PropertyRef Name="idClienteFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentaPaquetes_Paquetes">
+    <End Role="Paquetes" Type="Self.Paquetes" Multiplicity="0..1" />
+    <End Role="VentaPaquetes" Type="Self.VentaPaquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paquetes">
+        <PropertyRef Name="idPaquetePK" />
+      </Principal>
+      <Dependent Role="VentaPaquetes">
+        <PropertyRef Name="idPaqueteFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentaPaquetes_Usuarios_Crea">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="VentaPaquetes" Type="Self.VentaPaquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="VentaPaquetes">
+        <PropertyRef Name="idUsuarioCreaVentaPaqueteFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentaPaquetes_Usuarios_Modifica">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="VentaPaquetes" Type="Self.VentaPaquetes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarioPK" />
+      </Principal>
+      <Dependent Role="VentaPaquetes">
+        <PropertyRef Name="idUsuarioModificaVentaPaqueteFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="TFSModelStoreContainer">
+    <EntitySet Name="Clasificaciones" EntityType="Self.Clasificaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Convenios" EntityType="Self.Convenios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Financieras" EntityType="Self.Financieras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Paquetes" EntityType="Self.Paquetes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Perfiles" EntityType="Self.Perfiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehiculos" EntityType="Self.Vehiculos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VentaPaquetes" EntityType="Self.VentaPaquetes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Clasificaciones_Usuarios_Crea" Association="Self.FK_Clasificaciones_Usuarios_Crea">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Clasificaciones" EntitySet="Clasificaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clasificaciones_Usuarios_Modifica" Association="Self.FK_Clasificaciones_Usuarios_Modifica">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Clasificaciones" EntitySet="Clasificaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_Clasificaciones" Association="Self.FK_Clientes_Clasificaciones">
+      <End Role="Clasificaciones" EntitySet="Clasificaciones" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_Usuarios_Crea" Association="Self.FK_Clientes_Usuarios_Crea">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_Usuarios_Modifica" Association="Self.FK_Clientes_Usuarios_Modifica">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financieras_Usuarios_Crea" Association="Self.FK_Financieras_Usuarios_Crea">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Financieras" EntitySet="Financieras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financieras_Usuarios_Modifica" Association="Self.FK_Financieras_Usuarios_Modifica">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Financieras" EntitySet="Financieras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Paquetes_Financieras" Association="Self.FK_Paquetes_Financieras">
+      <End Role="Financieras" EntitySet="Financieras" />
+      <End Role="Paquetes" EntitySet="Paquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Paquetes_Usuarios_Crea" Association="Self.FK_Paquetes_Usuarios_Crea">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Paquetes" EntitySet="Paquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Paquetes_Usuarios_Modifica" Association="Self.FK_Paquetes_Usuarios_Modifica">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Paquetes" EntitySet="Paquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Paquetes_Vehiculos" Association="Self.FK_Paquetes_Vehiculos">
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+      <End Role="Paquetes" EntitySet="Paquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Perfiles_Usuarios_Crea" Association="Self.FK_Perfiles_Usuarios_Crea">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Perfiles" EntitySet="Perfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Perfiles_Usuarios_Modifica" Association="Self.FK_Perfiles_Usuarios_Modifica">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Perfiles" EntitySet="Perfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Perfiles" Association="Self.FK_Usuarios_Perfiles">
+      <End Role="Perfiles" EntitySet="Perfiles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Usuarios_Crea" Association="Self.FK_Usuarios_Usuarios_Crea">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Usuarios1" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Usuarios_Modifica" Association="Self.FK_Usuarios_Usuarios_Modifica">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Usuarios1" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehiculos_Convenios" Association="Self.FK_Vehiculos_Convenios">
+      <End Role="Convenios" EntitySet="Convenios" />
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehiculos_Usuarios_Crea" Association="Self.FK_Vehiculos_Usuarios_Crea">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehiculos_Usuarios_Modifica" Association="Self.FK_Vehiculos_Usuarios_Modifica">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentaPaquetes_Clientes" Association="Self.FK_VentaPaquetes_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="VentaPaquetes" EntitySet="VentaPaquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentaPaquetes_Paquetes" Association="Self.FK_VentaPaquetes_Paquetes">
+      <End Role="Paquetes" EntitySet="Paquetes" />
+      <End Role="VentaPaquetes" EntitySet="VentaPaquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentaPaquetes_Usuarios_Crea" Association="Self.FK_VentaPaquetes_Usuarios_Crea">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="VentaPaquetes" EntitySet="VentaPaquetes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentaPaquetes_Usuarios_Modifica" Association="Self.FK_VentaPaquetes_Usuarios_Modifica">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="VentaPaquetes" EntitySet="VentaPaquetes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,58 @@
+﻿@model TFSi.Clasificaciones
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Clasificaciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionClasificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionClasificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreaClasificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreaClasificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaModificaClasificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaModificaClasificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.descripcionUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios1.descripcionUsuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idClasificacionPK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<TFSi.Vehiculos>
+
+@{
+    ViewBag.Title = "Vehículos";
+}
+
+<h2>Vehículos</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcionVehiculo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.matriculaVehiculo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCreaVehiculo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaModificaVehiculo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Convenios.descripcionConvenio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionVehiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.matriculaVehiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCreaVehiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaModificaVehiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Convenios.descripcionConvenio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios.descripcionUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios1.descripcionUsuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idVehiculoPK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idVehiculoPK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idVehiculoPK })
+        </td>
+    </tr>
+}
+
+</table>

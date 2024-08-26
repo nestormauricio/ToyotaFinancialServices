@@ -1,0 +1,100 @@
+﻿@model IEnumerable<TFSi.Paquetes>
+
+@{
+    ViewBag.Title = "Paquetes";
+    //ViewBag.Title = "Index";
+}
+
+<h2>Paquetes</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcionPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.montoSugeridoPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mesesSugeridoPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.interesesSugeridoPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cuotaMensualEstimadaPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.clausulasPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCreaPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaModificaPaquete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Financieras.descripcionFinananciera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios.descripcionUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios1.descripcionUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehiculos.descripcionVehiculo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.montoSugeridoPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mesesSugeridoPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.interesesSugeridoPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cuotaMensualEstimadaPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.clausulasPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCreaPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaModificaPaquete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Financieras.descripcionFinananciera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios.descripcionUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios1.descripcionUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vehiculos.descripcionVehiculo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPaquetePK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPaquetePK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPaquetePK })
+        </td>
+    </tr>
+}
+
+</table>
